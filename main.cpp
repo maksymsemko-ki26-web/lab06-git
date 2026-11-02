@@ -34,5 +34,27 @@ int main() {
         cout << "There are less than two odd elements." << endl;
     }
 
+int C[SIZE];
+
+if (secondOddIndex != -1) {
+    for (int i = 0; i < SIZE; i++) {
+        C[i] = A[i];
+
+        if (i > secondOddIndex) {
+            C[i] = A[i] / secondOddValue;
+        }
+    }
+} else {
+    for (int i = 0; i < SIZE; i++) {
+        C[i] = A[i];
+    }
+}
+
+cout << "Array C: ";
+for (int i = 0; i < SIZE; i++) {
+    cout << C[i] << " ";
+}
+cout << endl;
+
     return 0;
 }
